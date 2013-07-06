@@ -23,7 +23,7 @@
         <% @students.each do |student| %>
           <li class="home-blog-post">
             <div class="blog-thumb">
-              <img width="360" height="140" src="/assets/<%= student.avatar_file_name %>" class="attachment-blog-thumb wp-post-image" alt="">
+              <img width="360" height="140" src="<%= student.photo_path %>" class="attachment-blog-thumb wp-post-image" alt="">
             </div>
 
             <div class="blog-title">

@@ -1,0 +1,133 @@
+<style>
+  .top-page-title {
+    background: url(/assets/<%= @student.pic_file_name %>) no-repeat top center;
+    background-size: 100% 100%;
+    margin-bottom: 100px;
+    text-align: center;
+    height: 275px;
+  }
+  .site-icon {
+    margin: 5px;
+    padding: 5px;
+    float: left;
+  }
+</style>
+
+<!-- Begin Content -->
+    <div class="container">
+
+      <!-- Begin Splash Image -->
+      <div class="top-page-title">
+
+        <div>
+          <img src="/assets/<%= @student.avatar_file_name %>" class="student_pic">
+        </div>
+      </div>
+      <! -- End Splash Image -->
+
+      <!-- Begin Title Content -->
+      <div class="page-title">
+        <h4 class="ib_main_header"><%= @student.name %></h4>
+        <div class="social-icons">
+          <a href="<%= @student.twitter %>"><i class="icon-twitter ib-social-icons"></i></a>
+          <a href="<%= @student.linkedin%> "><i class="icon-linkedin-sign ib-social-icons"></i></a>
+          <a href="<%=  %>"><i class="icon-github ib-social-icons"></i></a>
+          <a href="<%= @student.website %>"><i class="icon-rss ib-social-icons"></i></a>
+        </div>
+
+        <div class="section section-testimonials-curriculum quote-div">
+          <div id="testimonial-slider" class="flexslider">
+            <ul class="testimonials slides">
+              <li id="text-7" class="widget_text" style="list-style: none; display: list-item;">
+                <div class="textwidget">
+                  <h3><%= @student.tag_line %></h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Title Content -->
+
+      <!-- Some Content on Full Width -->
+      <div id="random-full-width-content" class="this-div-is-just-a-helpful-container">
+        <div id="scroll-about" class="section section-services">
+          <div class="section-title">
+            <span class="actual-title">About</span>
+            <div class="go-to-top"><a href="#scroll-header">Go To Top</a></div>
+          </div>
+
+          <div class="services-wrap" id="equalize">
+
+            <div id="ok-text-column-2" class="column ok-text-column" style="height: 204px;">
+              <div class="services">
+                <div class="services-title"><h3>Biography</h3></div>
+                <div class="clear"></div>
+                <p>
+                  <%= @student.bio %>
+                </p>
+              </div>
+            </div>
+
+            <div id="ok-text-column-3" class="column ok-text-column" style="height: 204px;">
+              <div class="services">
+                <div class="services-title"><h3>Education</h3></div>
+                <div class="clear"></div>
+                <ul>
+                  <li>BS Chemical Engineering 2008, MIT</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="ok-text-column-4" class="column ok-text-column" style="height: 204px;">
+              <div class="services">
+                <div class="services-title"><h3>Work</h3></div>
+                <div class="clear"></div>
+                  <ul>
+                    <li><a href="http://www.zsassociates.com/">Associate Consultant @ ZS Associates</a></li>
+                    <li><a href="http://ki.mit.edu">Technical Assistant @ Koch Institute</a></li>
+                    <li><a href="http://web.mit.edu/langerlab">Undergrad Researcher @ Langer Lab</a></li>
+                    <li><a href="http://www.mitre.org/tech/nanotech/ourwork/studentprogram.html">Nanosystems Group @ MITRE Corp</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+          <div id="random-full-width-content" class="this-div-is-just-a-helpful-container">
+            <div class="section section-services">
+              <div id="scroll-coder-cred" class="section-title">
+                <span class="actual-title">Coder Cred</span>
+                <div class="go-to-top"><a href="#scroll-header">Go To Top</a></div>
+              </div>
+
+              <div class="services-wrap section coder-cred" id="equalize">
+
+                <div class="column fourth">
+                  <a href="" target="_blank"><img src="http://static.001.students.flatironschool.com/images/github_eewang.png" alt="GitHub" width="130px"></a>
+                </div>
+
+                <div class="column fourth">
+                  <a href="<%= @student.treehouse %>" target="_blank"><img src="http://static.001.students.flatironschool.com/images/treehouse_eewang.png" alt="Treehouse" width="130px"></a>
+                </div>
+
+                <div class="column fourth">
+                  <a href="<%= @student.codeschool %>" target="_blank"><img src="http://static.001.students.flatironschool.com/images/codeschool_eewang.jpg" alt="Code School" width="130"></a>
+                </div>
+
+                <div class="column fourth">
+                  <a href="<%= @student.coderwall %>" target="_blank"><img src="http://static.001.students.flatironschool.com/images/coderwall_eewang.jpeg" alt="Coder Wall" width="130"></a>
+                </div>
+              </div>
+              <! -- End Service -->
+            </div>
+            <! -- End Coder Cred -->
+          </div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  <!-- End Footer Widgets -->
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

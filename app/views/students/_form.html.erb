@@ -1,0 +1,69 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :pic_file_name %><br />
+    <%= f.text_field :pic_file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar_file_name %><br />
+    <%= f.text_field :avatar_file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :tag_line %><br />
+    <%= f.text_field :tag_line %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= f.label :blog %><br />
+    <%= f.text_field :blog %>
+  </div>
+  <div class="field">
+    <%= f.label :treehouse %><br />
+    <%= f.text_field :treehouse %>
+  </div>
+  <div class="field">
+    <%= f.label :codeschool %><br />
+    <%= f.text_field :codeschool %>
+  </div>
+  <div class="field">
+    <%= f.label :coderwall %><br />
+    <%= f.text_field :coderwall %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin %><br />
+    <%= f.text_field :linkedin %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br />
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

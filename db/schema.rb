@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130706024516) do
+ActiveRecord::Schema.define(:version => 20130706135816) do
 
   create_table "students", :force => true do |t|
     t.string   "name"
@@ -27,9 +27,10 @@ ActiveRecord::Schema.define(:version => 20130706024516) do
     t.string   "linkedin"
     t.string   "website"
     t.string   "twitter"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.string   "extension"
+    t.string   "background_extension"
   end
 
 end

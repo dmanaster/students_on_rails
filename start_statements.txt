@@ -1,6 +1,7 @@
 rails new students
 
-rails generate scaffold Student name:string email:string  pic_file_name:string avatar_file_name:string tag_line:string bio:text blog:string treehouse:string codeschool:string coderwall:string linkedin:string website:string twitter:string github:string  education:string work_experience:string icon_file_name:string
+rails generate migration AddDetailsToStudents github:string education:string work_experience:string
+
 
 rake db:migrate
 

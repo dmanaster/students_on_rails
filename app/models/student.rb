@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-  attr_accessible :avatar_file_name, :bio, :blog, :coderwall, :codeschool, :email, :linkedin, :name, :pic_file_name, :tag_line, :treehouse, :twitter, :website, :extension, :photo, :background
+  attr_accessible :avatar_file_name, :bio, :blog, :coderwall, :codeschool, :email, :linkedin, :name, :pic_file_name, :tag_line, :treehouse, :twitter, :website, :extension, :photo, :background, :github, :education, :work_experience
 
   # the name is mandatory
   validates_presence_of :name, :message => "must not be blank."
